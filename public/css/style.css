@@ -1,0 +1,28 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: #757575;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+li a {
+	color: maroon;
+}
+
+li {
+	width: 300px;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: #424242 5px 5px 5px;
+	background-color: rgba(255,255,255,0.3);
+	margin: 20px auto;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: outset 5px grey;
+	letter-spacing: 0.7em;
+}
+
+li:hover {
+	background-color: rgba(255,255,255,0.6);
+}
