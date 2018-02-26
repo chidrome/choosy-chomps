@@ -58,4 +58,23 @@ input {
 	margin-top: 20px;
 }
 
+h4 {
+	color: #00B233;
+	font-family: 'EB Garamond', serif;
+}
 
+span {
+	color: #81c784;
+	font-family: 'EB Garamond', serif;
+}
+
+.profile {
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 20px;
+	border: #bdbdbd solid 15px;
+}
+
+.greeting {
+	color: #d32f2f;
+	font-family: 'EB Garamond', serif;
+}

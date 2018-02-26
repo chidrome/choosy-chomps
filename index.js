@@ -10,7 +10,6 @@ var isLoggedIn = require('./middleware/isLoggedIn');
 var app = express();
 
 app.set('view engine', 'ejs');
-
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
@@ -53,6 +52,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
 });
 
 app.use('/auth', require('./controllers/auth'));
+app.use('/profile', require('./controllers/profile'));
 
 var server = app.listen(process.env.PORT || 3000);
 

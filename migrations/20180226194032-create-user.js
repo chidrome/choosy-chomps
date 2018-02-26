@@ -17,6 +17,12 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      favorite: {
+        type: Sequelize.INTEGER
+      },
+      bio: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
