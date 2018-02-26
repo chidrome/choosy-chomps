@@ -1,28 +1,61 @@
+/*font-family: 'EB Garamond', serif;
+font-family: 'Pompiere', cursive;*/
+
 html, body {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	background-color: #757575;
-	font-family: 'Share Tech Mono', monospace;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	background-color: #bdbdbd ;
 }
 
-li a {
-	color: maroon;
+nav {
+	font-family: 'EB Garamond', serif;
 }
 
-li {
-	width: 300px;
-	padding: 20px;
-	border-radius: 20px;
-	box-shadow: #424242 5px 5px 5px;
-	background-color: rgba(255,255,255,0.3);
-	margin: 20px auto;
-	text-transform: uppercase;
-	font-weight: 600;
-	border: outset 5px grey;
-	letter-spacing: 0.7em;
+input {
+	margin: 0!important;
 }
 
-li:hover {
-	background-color: rgba(255,255,255,0.6);
+.card-title {
+	font-family: 'EB Garamond', serif;
 }
+
+.carousel-item {
+	width: 80%;
+	height: 100%;
+}
+
+.carousel-fixed-item h1 {
+	font-family: 'EB Garamond', serif;
+	text-shadow: 3px 3px #323232;
+	color: white;
+}
+
+.carousel-fixed-item p {
+	background-color: rgba(0,0,0,0.4);
+
+}
+
+.activator {
+	border: solid white 10px;
+	border-radius: 50%!important;
+}
+
+.selectionbox {
+	margin: 15px auto 10px auto!important;
+}
+
+.btn-large {
+	height: 42px!important;
+	line-height: 42px!important;
+	border-radius: 15px;
+}
+
+.searchbox {
+	background-color: white;
+	border-radius: 15px;
+}
+
+.login {
+	margin-top: 20px;
+}
+
+

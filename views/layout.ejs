@@ -8,18 +8,25 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel='stylesheet' href='/css/style.css'>
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Pompiere|Antic|Montserrat|Barlow+Semi+Condensed" rel="stylesheet">
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
 
   </head>
+  <header class='header'> <% include partials/navbar %> </header>
   <body>
+
+
     <div class="container">
-      <h1>Authentication</h1>
-      <%- JSON.stringify(currentUser) %>
       <% include partials/alerts %>
       <%- body %>
     </div>
 
+  <% include partials/footer %>
+
+
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src='/js/main.js'></script>
   </body>
 </html>
