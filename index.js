@@ -49,6 +49,7 @@ app.get('/', function(req, res) {
 //check to see if user is logged in with isLoggedIn
 app.get('/profile', isLoggedIn, function(req, res) {
   res.render('profile');
+
 });
 
 app.use('/auth', require('./controllers/auth'));
