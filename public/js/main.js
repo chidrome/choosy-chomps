@@ -6,8 +6,9 @@ $( document ).ready(function(){
 	setInterval(function() {
 		$('.carousel.carousel-slider').carousel('next');
 	}, 4000);
+	
 	//submits the data for the edit 
-	$('.edit-tag').submit(function(e) {
+	$('.edit-profile').submit(function(e) {
 		console.log('submit');
 		e.preventDefault();
 		$.ajax({
@@ -18,9 +19,15 @@ $( document ).ready(function(){
 				bio: $('#bio').val()
 			}
 		}).done(function(data) {
+			console.log(data);
 			window.location.href = '/profile';
 		});
 	});
 
-
+	$('.all-recipes').infiniteScroll({
+	  // options
+	  path: '.pagination__next',
+	  append: '.post',
+	  history: false,
+});
 })

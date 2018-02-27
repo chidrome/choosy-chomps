@@ -14,8 +14,17 @@ input {
 	margin: 0!important;
 }
 
+h6 {
+	font-weight: 600;
+}
+
 .card-title {
 	font-family: 'EB Garamond', serif;
+}
+
+.recipe-title {
+	font-size: 18px!important;
+	text-transform: capitalize;
 }
 
 .carousel-item {
@@ -77,4 +86,10 @@ span {
 .greeting {
 	color: #d32f2f;
 	font-family: 'EB Garamond', serif;
+}
+
+.ingredients {
+	overflow: scroll;
+	height: 75px;
+	margin-bottom: 20px;
 }

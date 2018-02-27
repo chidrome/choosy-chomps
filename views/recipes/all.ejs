@@ -1,0 +1,33 @@
+<div class='row all-recipes'>
+	<div class='col s12 m12 l12'>
+		<% recipe.hits.forEach(function(recipe) { %>
+
+		<div class='col s12 m6 l6'>
+			<div class="card white">
+                
+                 <div class="card-image">
+              		<img class='activator' src="<%= recipe.recipe.image %>">
+            	 </div>
+            	 <div class="card-content">
+            	 	<span class="card-title recipe-title red-text text-darken-4"><%= recipe.recipe.label %></span>
+            	 	<h6>Ingredients: </h6>
+            	 	<div class='ingredients'>
+	            	 	<ul>
+	        	 		<% for(i = 0; i < recipe.recipe.ingredientLines.length; i++ ) {%>
+	            	 		<li> <%= recipe.recipe.ingredientLines[i] %> </li>
+	            	 		<% } %>
+	            	 	</ul>
+	            	 </div>
+
+                   <form id='sub' method="POST" action="/recipe">
+                     <input class='center' hidden type="text" name="name" value="<%= recipe.recipe.label %>">
+                     <button class='btn green accent-4 text-white waves-effect col s12 m12 l12' type="submit">Add to &hearts;s</button><br>
+                     <a id='deets' href="./recipe/<%= recipe.recipe.label %>">View Details</a>
+                   </form>
+                </div>
+              </div>
+		</div>
+
+		<% }); %>
+	</div>
+</div>

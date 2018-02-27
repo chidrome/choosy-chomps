@@ -16,19 +16,37 @@
 </div>
 
 <div class='row center'>
-	<form>
+	<form action='/recipes' method='GET'>
         <div class="input-field col sm12 m5 l5 center searchbox">
-          <input id="search" type="search" required>
+          <input id="search" type="search" name='search' required>
           <label class="label-icon" for="search">Search for your favorite food!</label>
           <i class="material-icons">search</i>
         </div>
-		<select class="browser-default selectionbox col sm12 m5 l5">
-			<option value="" disabled selected>Diet Options</option>
-			<option value="1">these</option>
-			<option value="2">will be</option>
-			<option value="3">health api options</option>
+		<select name='selectionbox' class="browser-default selectionbox col sm12 m5 l5">
+			<option value="null" selected>Diet Options</option>
+			
+			<option value="alcohol-free">Alcohol-Free</option>
+			<option value="crustacean-free">Crustacean-Free</option>
+			<option value="dairy-free">Dairy-Free</option>
+			<option value="egg-free">Egg-Free</option>
+			<option value="gluten-free">Gluten-Free</option>
+			<option value="kosher">Kosher</option>
+			<option value="no-oil-added">No oil added</option>
+			<option value="low-sugar">Low Sugar</option>
+			<option value="paleo">Paleo</option>
+			<option value="peanut-free">Peanut-Free</option>
+			<option value="pescatarian">Pescatarian</option>
+			<option value="pork-free">Pork-Free</option>
+			<option value="red-meat-free">Red Meat-Free</option>
+			<option value="shellfish-free">Shellfish-Free</option>
+			<option value="soy-free">Soy-Free</option>
+			<option value="sugar-conscious">Sugar Conscious</option>
+			<option value="tree-nut-free">Tree Nut-Free</option>
+			<option value="vegan">Vegan</option>
+			<option value="vegatarian">Vegetarian</option>
+			<option value="wheat-free">Wheat-Free</option>
 		</select>
-		 <button type='button' class='col sm12 m2 l2 btn-large selectionbox waves-effect waves-light red darken-2 center'>Search!</button>
+		 <button type='submit' class='col sm12 m2 l2 btn-large selectionbox waves-effect waves-light red darken-2 center'>Search!</button>
      </form>
 </div>
 
@@ -91,8 +109,3 @@
   		</div>
 	</div>
 </div>
-
-
-<!-- 
-  this page will list the services choosy chomps provides and a sign up button that 
-  will send user to sign up page.  -->
