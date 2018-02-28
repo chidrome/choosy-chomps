@@ -48,12 +48,12 @@ app.get('/', function(req, res) {
 });
 
 //check to see if user is logged in with isLoggedIn
+//displays the user's favorites
 app.get('/profile', isLoggedIn, function(req, res) {
 	 db.favorite.findAll().then(function(recipe) {
 	 	console.log(recipe);
     	res.render('profile', {recipe: recipe});
     })
-
 });
 
 app.use('/auth', require('./controllers/auth'));

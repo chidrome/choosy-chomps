@@ -5,7 +5,7 @@ $( document ).ready(function(){
 	$('.carousel.carousel-slider').carousel({fullWidth: true});
 	setInterval(function() {
 		$('.carousel.carousel-slider').carousel('next');
-	}, 4000);
+	}, 4750);
 	
 	//submits the data for the edit 
 	$('.edit-profile').submit(function(e) {

@@ -25,18 +25,17 @@ router.put('/new/:id', function(req, res) {
 	});
 });
 
-
 //adds a recipe to the favorites by gathering info
 //from the hidden form values on all.ejs and then 
 //it splits the ingredients into an array 
 //and reloads the search page 
 router.post('/', function(req, res) {
-	console.log('hit that');
 	db.favorite.create({
 	    label: req.body.label,
 	    imgUrl: req.body.image,
 	    ingredients: req.body.ingredients.split(','),
-	    url: req.body.url
+	    url: req.body.url,
+	    uri: req.body.uri
 	}).then(function(data) {
 		// console.log(data);
 		res.redirect('back');

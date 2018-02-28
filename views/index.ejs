@@ -17,12 +17,12 @@
 
 <div class='row center'>
 	<form action='/recipes' method='GET'>
-        <div class="input-field col sm12 m5 l5 center searchbox">
-          <input id="search" type="search" name='search' required>
-          <label class="label-icon" for="search">Search for your favorite food!</label>
+        <div class="input-field col s12 m5 l5 center searchbox">
+          <input id="search" class ='col s12 m5 l5' type="search" name='search' placeholder='Search ingredients' required>
+          <label class="label-icon" for="search"></label>
           <i class="material-icons">search</i>
         </div>
-		<select name='selectionbox' class="browser-default selectionbox col sm12 m5 l5">
+		<select name='selectionbox' class="browser-default selectionbox col s12 m5 l5">
 			<option value="null" selected>Diet Options</option>
 			<option value="dairy-free">Dairy-Free</option>
 			<option value="egg-free">Egg-Free</option>
@@ -38,7 +38,7 @@
 			<option value="vegatarian">Vegetarian</option>
 			<option value="wheat-free">Wheat-Free</option>
 		</select>
-		 <button type='submit' class='col sm12 m2 l2 btn-large selectionbox waves-effect waves-light red darken-2 center'>Search!</button>
+		 <button type='submit' class='col s12 m2 l2 btn-large selectionbox waves-effect waves-light red darken-2 center'>Search!</button>
      </form>
 </div>
 

@@ -34,14 +34,19 @@ router.get('/', function(req, res) {
 });
 
 //shows details of a specific recipe
-router.get('/:name', function(req, res) {
-	var pokeName = req.params.name;
-	var pokemonUrl = 'http://pokeapi.co/api/v2/pokemon/' + pokeName;
-	request(pokemonUrl, function(error, response, body) {
-		pokeShow = JSON.parse(body);
-		console.log(pokeShow);
-		res.render('pokemon/show', {pokemon: pokeShow });
-	});
+router.get('/:label', function(req, res) {
+	var recipeLabel = req.params.label;
+	var recipeUri = '';
+	db.favorite.find({where: {label: recipeLabel}}).then(function(data) {
+		recipeUri = data.dataValues.uri;
+		recipeUrl = 'https://api.edamam.com/search?app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&r=' + recipeUri;
+		console.log(recipeUrl);
+		request(recipeUrl, function(error, response, body) {
+			recipe = JSON.parse(body);
+			console.log(recipe[0]);
+			res.render('recipes/show', {recipe: recipe });
+		});
+	})
 });
 
 

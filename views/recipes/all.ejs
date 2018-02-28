@@ -32,12 +32,13 @@
                      <input class='center' hidden type="text" name="label" value="<%= recipe.recipe.label %>">
                      <input class='center' hidden type="text" name="ingredients" value="<%= recipe.recipe.ingredientLines %>">
                      <input class='center' hidden type="text" name="url" value="<%= recipe.recipe.url %>">
+                     <input class='center' hidden type="text" name="uri" value="<%= recipe.recipe.uri %>">
                      <input class='center' hidden type="text" name="image" value="<%= recipe.recipe.image %>">
-                     <a class='left' href="./recipe/<%= recipe.recipe.label %>">View Details</a>
-                     <a class='right' href="<%= recipe.recipe.url %>">Link to recipe</a>
+                     <a class='left' href="./recipes/<%= recipe.recipe.label %>">View Details</a>
+                     <a class='right' href="<%= recipe.recipe.url %>">Link to source</a>
                      <button class='add-favorite btn-large green accent-4 text-white waves-effect col s12 m12 l12' type="submit">Add to &hearts;s</button><br>
                    </form>
-                   
+
                 </div>
               </div>
 		</div>

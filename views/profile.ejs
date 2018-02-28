@@ -15,12 +15,12 @@
 			      <h5><a class='label red-text text-darken-3' href='<%= recipe.url %>'><%= recipe.label %></a></h5>
 			      <a href='<%= recipe.url %>'><img class='responsive-img recipe-pic' src='<%= recipe.imgUrl %>'></a>
 			      <p class='recipe-info'></p>
-	            	 	<ul>
-	        	 		<% for(i = 0; i < recipe.ingredients; i++ ) {%>
-	            	 		<li> <%= recipe.ingredients[i] %> </li>
-	            	 		<% } %>
-	            	 	</ul>
-            	 	<span id="view-recipe" action="/recipes/<%= recipe.label %>">Nutrition Details <i class="tiny fave-page material-icons">info</i></span>
+            	 	<ul>
+        	 		<% for(i = 0; i < recipe.ingredients; i++ ) {%>
+            	 		<li> <%= recipe.ingredients[i] %> </li>
+            	 		<% } %>
+            	 	</ul>
+            	 	<a class="view-recipe" href="/recipes/<%= recipe.label %>">Nutrition Details <i class="tiny fave-page material-icons">info</i></a>
 			      <span id="delete-recipe" action="/profile/<%= recipe.label %>">Delete <i class="tiny fave-page material-icons">cancel</i></span>
 			<% }) %>
 			</div>

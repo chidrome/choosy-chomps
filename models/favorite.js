@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: []
     },
     imgUrl: DataTypes.STRING,
-    url: DataTypes.STRING
+    url: DataTypes.STRING,
+    uri: DataTypes.STRING
   }, {});
   favorite.associate = function(models) {
     // associations can be defined here
