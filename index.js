@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session'); 
 var passport = require('./config/ppConfig');
 var isLoggedIn = require('./middleware/isLoggedIn');
+var db = require('./models');
 
 var app = express();
 
@@ -48,7 +49,10 @@ app.get('/', function(req, res) {
 
 //check to see if user is logged in with isLoggedIn
 app.get('/profile', isLoggedIn, function(req, res) {
-  res.render('profile');
+	 db.favorite.findAll().then(function(recipe) {
+	 	console.log(recipe);
+    	res.render('profile', {recipe: recipe});
+    })
 
 });
 

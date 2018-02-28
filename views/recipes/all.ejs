@@ -1,33 +1,59 @@
-<div class='row all-recipes'>
+<div class='row'>
 	<div class='col s12 m12 l12'>
 		<% recipe.hits.forEach(function(recipe) { %>
 
-		<div class='col s12 m6 l6'>
-			<div class="card white">
+		<!-- to get calories per serving rather than total -->
+		<script>
+			var calories = Math.floor( <%= recipe.recipe.calories %> );
+			var servings = Math.floor( <%= recipe.recipe.yield %> );
+			var calPerServ = Math.floor(calories/servings); 
+		</script>
+
+		<div class='col s12 m6 l6 all-recipes'>
+			<div class="card white recipe">
                 
                  <div class="card-image">
               		<img class='activator' src="<%= recipe.recipe.image %>">
             	 </div>
             	 <div class="card-content">
             	 	<span class="card-title recipe-title red-text text-darken-4"><%= recipe.recipe.label %></span>
-            	 	<h6>Ingredients: </h6>
+            	 	<h6><strong>Ingredients: </strong></h6>
             	 	<div class='ingredients'>
 	            	 	<ul>
 	        	 		<% for(i = 0; i < recipe.recipe.ingredientLines.length; i++ ) {%>
 	            	 		<li> <%= recipe.recipe.ingredientLines[i] %> </li>
 	            	 		<% } %>
+	            	 		<li>Calories: <script> document.write(calPerServ) </script></li>
+	            	 		<li>Servings: <%= recipe.recipe.yield %> </li>
 	            	 	</ul>
 	            	 </div>
 
-                   <form id='sub' method="POST" action="/recipe">
-                     <input class='center' hidden type="text" name="name" value="<%= recipe.recipe.label %>">
-                     <button class='btn green accent-4 text-white waves-effect col s12 m12 l12' type="submit">Add to &hearts;s</button><br>
-                     <a id='deets' href="./recipe/<%= recipe.recipe.label %>">View Details</a>
+                   <form id='sub' method="POST" action="/profile">
+                     <input class='center' hidden type="text" name="label" value="<%= recipe.recipe.label %>">
+                     <input class='center' hidden type="text" name="ingredients" value="<%= recipe.recipe.ingredientLines %>">
+                     <input class='center' hidden type="text" name="url" value="<%= recipe.recipe.url %>">
+                     <input class='center' hidden type="text" name="image" value="<%= recipe.recipe.image %>">
+                     <a class='left' href="./recipe/<%= recipe.recipe.label %>">View Details</a>
+                     <a class='right' href="<%= recipe.recipe.url %>">Link to recipe</a>
+                     <button class='add-favorite btn-large green accent-4 text-white waves-effect col s12 m12 l12' type="submit">Add to &hearts;s</button><br>
                    </form>
+                   
                 </div>
               </div>
 		</div>
-
 		<% }); %>
 	</div>
 </div>
+
+<div class="scroller-status">
+  <div class="infinite-scroll-request loader-ellipse">
+    ...
+  </div>
+  <p class="infinite-scroll-last">End of content</p>
+  <p class="infinite-scroll-error">No more pages to load</p>
+</div>
+
+<!-- pagination has path -->
+<p class="pagination">
+  <a class="pagination__next" href="page2.html">Next page</a>
+</p>

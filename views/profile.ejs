@@ -9,10 +9,21 @@
 	</div>
 	<div class='col s12 m6 l6 profile'>
 		<h4>Your Favorites: </h4>
-		<!-- for each for all the favorites -->
-		<!-- label:
-		image:
-		ingredients:
-		share: -->
+		<div class='faves'>
+			<div class="col s12 m12 l12 center">
+		<% recipe.forEach(function(recipe) { %>
+			      <h5><a class='label red-text text-darken-3' href='<%= recipe.url %>'><%= recipe.label %></a></h5>
+			      <a href='<%= recipe.url %>'><img class='responsive-img recipe-pic' src='<%= recipe.imgUrl %>'></a>
+			      <p class='recipe-info'></p>
+	            	 	<ul>
+	        	 		<% for(i = 0; i < recipe.ingredients; i++ ) {%>
+	            	 		<li> <%= recipe.ingredients[i] %> </li>
+	            	 		<% } %>
+	            	 	</ul>
+            	 	<span id="view-recipe" action="/recipes/<%= recipe.label %>">Nutrition Details <i class="tiny fave-page material-icons">info</i></span>
+			      <span id="delete-recipe" action="/profile/<%= recipe.label %>">Delete <i class="tiny fave-page material-icons">cancel</i></span>
+			<% }) %>
+			</div>
+		</div>
 	</div>
 </div>

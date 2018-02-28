@@ -2,7 +2,11 @@
 module.exports = (sequelize, DataTypes) => {
   var favorite = sequelize.define('favorite', {
     label: DataTypes.STRING,
-    ingredients: DataTypes.ARRAY(DataTypes.STRING),
+    ingredients: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: true,
+      defaultValue: []
+    },
     imgUrl: DataTypes.STRING,
     url: DataTypes.STRING
   }, {});

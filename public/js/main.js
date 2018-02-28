@@ -25,9 +25,23 @@ $( document ).ready(function(){
 	});
 
 	$('.all-recipes').infiniteScroll({
-	  // options
 	  path: '.pagination__next',
-	  append: '.post',
-	  history: false,
+	  append: '.recipe',
+	  status: '.scroller-status',
+	  hideNav: '.pagination',
+	});
+
+	$('#delete-recipe').on('click', function(e) {
+	e.preventDefault();
+	var specificRecipe = $(this);
+	var destination = specificRecipe.attr('action');
+	$.ajax({
+			method: 'DELETE', 
+			url: destination
+		}).done(function(data) {
+			console.log(data);
+			window.location = '/profile';
+		});
+	});
+
 });
-})
