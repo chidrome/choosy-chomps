@@ -7,15 +7,15 @@ This is a fully-functional Node.js recipe app that is catered toward those who h
 Make an account by clicking "Sign Up" anywhere on the page. From the home page, you can enter a particular search query and browse through an extensive list of recipes. From there, you can add favorite recipes to save and view later on, which you can access from your profile. 
 
 # Technologies Used 
-*Node.js
-*Express
-*SQL
-*Postgres
-*Sequelize
-*JavaScript
-*jQuery
-*Materialize
-*HTML5/CSS3
+* Node.js
+* Express
+* SQL
+* Postgres
+* Sequelize
+* JavaScript
+* jQuery
+* Materialize
+* HTML5/CSS3
 
 ## Where to begin? 
 
