@@ -3,14 +3,11 @@ font-family: 'Pompiere', cursive;*/
 
 html, body {
 	font-family: 'Barlow Semi Condensed', sans-serif;
-	background: 
-		linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
-		linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
-		linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
-		linear-gradient(45deg, #ECEDDC 25%, transparent 25%);	
-	background-size: 100px 100px;
-	background-color: #b2dfdb;
-	background-attachment: fixed;
+	background-color:#eceff1;
+	background-image: linear-gradient(90deg, rgba(229, 115, 115,.5) 50%, transparent 50%),
+		linear-gradient(rgba(229, 115, 115,.5) 50%, transparent 50%);
+	background-size:100px 100px;
+/*	background-attachment: fixed;*/
 	color: #37474f ;
 }
 
