@@ -16,6 +16,8 @@ Make an account by clicking "Sign Up" anywhere on the page. From the home page, 
 * jQuery
 * Materialize
 * HTML5/CSS3
+* BCrypt
+* EJS
 
 ## Where to begin? 
 
