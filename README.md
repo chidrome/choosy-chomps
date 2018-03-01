@@ -54,8 +54,9 @@ With some trial and error, I managed to make a fully-responsive home page with i
 
 ## Routes 
 
-| GET    | /                 | Renders the home page of Choosy Chomps                                                                                                 |
+| CRUD   | ROUTE             | FUNCTIONALITY                                                                                                |
 |--------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| GET    | /                 | Renders the home page of Choosy Chomps                                                                                                 |
 | GET    | /profile          | Renders the user's profile page, but only when logged in. Otherwise, redirects to the login page.                                      |
 | GET    | /profile/edit/:id | Renders the "edit user data" page                                                                                                      |
 | PUT    | /profile/new/:id  | Updates the user data (namely, their name and bio)                                                                                     |
