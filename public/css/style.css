@@ -32,7 +32,7 @@ h6 {
 
 .form-background {
 	background-color: white;
-	padding: 20px;
+	padding: 40px;
 	margin-top: 20px;
 	border-radius: 15px;
 }
@@ -124,13 +124,6 @@ span {
 	height: 450px;
 }
 
-.greeting {
-	color: #d32f2f;
-	font-family: 'EB Garamond', serif;
-	text-shadow: 2px 2px #898989;
-	font-size: 40px;
-}
-
 .ingredients {
 	overflow: scroll;
 	height: 75px;
@@ -139,6 +132,11 @@ span {
 
 .ingredients, .detail {
 	height: 200px;
+}
+
+.egg {
+	margin: 15px;
+	height: 150px;
 }
 
 .faves {
@@ -158,6 +156,16 @@ span {
 	text-transform: uppercase;
 }
 
+.magnifying {
+	margin-top: 8px;
+}
+
 #delete-recipe:hover {
 	cursor: pointer;
+}
+
+@media (max-width: 450px) {
+	.brand-logo {
+		font-size: 20px!important;
+	}
 }

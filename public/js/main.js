@@ -44,4 +44,8 @@ $( document ).ready(function(){
 		});
 	});
 
+	//removes the 'logged in/out' alert from screen 
+	$('.okay').on('click', function(e) {
+		$('.alert').css('display', 'none');
+	});
 });

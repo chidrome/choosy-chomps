@@ -10,6 +10,7 @@
     <h4 class='center'><%= recipe[0].label %></h4>
     <div class='col s12 m3 l3 center'>
       <img class='responsive-img activator' src='<%= recipe[0].image %>'>
+      <br>
       <a href='<%= recipe[0].url %>'>Link to Source</a>
     </div>
     <div class='col s12 m3 l3'>
@@ -49,7 +50,7 @@
           <% for (var item in nutrients) { %>
 
             <li>  <% nutrients[item].label %>  </li>
-            
+
           <% } %>
         </ul>
       </div>
