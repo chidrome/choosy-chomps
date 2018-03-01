@@ -1,5 +1,4 @@
 # Choosy Chomps
-***
 
 This is a fully-functional Node.js recipe app that is catered toward those who have strict dietary restrictions (or are just picky eaters!) that pulls from the [Edamam API](https://www.edamam.com/) to provide detailed nutritional information about each recipe. Users can search for ingredients within a specific category of diet restriction and they are provided with a plethora of recipes that fit their needs. 
 
