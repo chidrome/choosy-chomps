@@ -23,9 +23,9 @@ To be honest, I was at a bit of a loss at first because it all seemed rather ove
 
 ### User Stories
 
-A.) "As a single mom of two picky eaters, this app is a lifesaver. I don't often have enough time to plan out the week's recipes, so being able to specify what ingredients I may have in my kitchen already or being able to exclude various types of recipes is so helpful." - Joyce
-B.) "I have a ridiculously restrictive diet due to health issues, and this app would help reduce the stress of finding something healthy to eat that doesn't also hurt me." - Logan
-C.) "I like trying new recipes every weekend, so being able to have access to thousands of recipes from all kinds of recipe sites is super convenient. I can browse while I'm on the bus!" - Marie 
+1. ) "As a single mom of two picky eaters, this app is a lifesaver. I don't often have enough time to plan out the week's recipes, so being able to specify what ingredients I may have in my kitchen already or being able to exclude various types of recipes is so helpful." - Joyce
+2. ) "I have a ridiculously restrictive diet due to health issues, and this app would help reduce the stress of finding something healthy to eat that doesn't also hurt me." - Logan
+3. ) "I like trying new recipes every weekend, so being able to have access to thousands of recipes from all kinds of recipe sites is super convenient. I can browse while I'm on the bus!" - Marie 
 
 Nice! That got some gears turning, so I managed to think up a rough draft for my wireframes:
 
