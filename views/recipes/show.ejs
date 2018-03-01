@@ -1,13 +1,74 @@
- <div class="show col s3 m6 l12">
-    <div class="show card yellow darken-1">
-      <div class="card-content white-text">
-        <span class="card-title"><%= recipe.label %></span>
-        <img class='responsive-img sprite' src='<%= recipe.image %>'>
-         <div class='row'>
-          <div class='types col s12 m4 l4'>
-            <!-- everything hurts -->
-          </div>
-        </div>
+<!-- to get calories per serving rather than total -->
+    <script>
+      var calories = Math.floor( <%= recipe[0].calories %> );
+      var servings = Math.floor( <%= recipe[0].yield %> );
+      var calPerServ = Math.floor(calories/servings); 
+    </script>
+
+<div class='row'>
+  <div class='col s12 m12 l12 form-background z-depth-5'>
+    <h4 class='center'><%= recipe[0].label %></h4>
+    <div class='col s12 m3 l3 center'>
+      <img class='responsive-img activator' src='<%= recipe[0].image %>'>
+      <a href='<%= recipe[0].url %>'>Link to Source</a>
+    </div>
+    <div class='col s12 m3 l3'>
+      <h5>Ingredients: </h5>
+      <div class='ingredients detail'>
+        <ul>
+          <% for(i = 0; i < recipe[0].ingredientLines.length; i++ ) {%>
+            <li> <%= recipe[0].ingredientLines[i] %> </li>
+          <% } %>
+        </ul>
       </div>
     </div>
+
+    <div class='col s12 m3 l3'>
+      <h5>Additional Info</h5>
+      <div class='ingredients detail'>
+        <ul>
+          <li>Calories Per Serving: <script> document.write(calPerServ) </script></li>
+          <li>Servings: <%= recipe[0].yield %> </li>
+          <h5> Health Labels: </h5>
+          <% for(i = 0; i < recipe[0].healthLabels.length; i++ ) {%>
+            <li> <%= recipe[0].healthLabels[i] %> </li>
+          <% } %>
+          <h5> Cautions: </h5>
+          <% for(i = 0; i < recipe[0].cautions.length; i++ ) {%>
+            <li> <%= recipe[0].cautions[i] %> </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+    <div class='col s12 m3 l3'>
+      <h5>Nutrients</h5>
+      <div class='ingredients detail'>
+        <ul>
+          <% var nutrients = recipe[0].totalNutrients; %>
+          <% for (var item in nutrients) { %>
+
+            <li>  <% nutrients[item].label %>  </li>
+            
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
 </div>

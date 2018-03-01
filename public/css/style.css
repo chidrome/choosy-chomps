@@ -137,6 +137,10 @@ span {
 	margin-bottom: 20px;
 }
 
+.ingredients, .detail {
+	height: 200px;
+}
+
 .faves {
 	overflow: scroll;
 	height: 300px;

@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 
 var recipeUrl = '';
+var encoded = '';
 
 //this calls the API and sets the URL according to 
 //whether or not the user entered just a query string or 
@@ -17,6 +18,8 @@ router.get('/', function(req, res) {
 	var recipe = null;
 	var queryString = req.query.search;
 	var healthOption = req.query.selectionbox;
+
+	//encodeURI() 
 	if (!(healthOption === 'null')) {
 		recipeUrl = 'https://api.edamam.com/search?app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&q=' + queryString + '&health=' + healthOption + '&to=100';
 	} else {
@@ -39,11 +42,11 @@ router.get('/:label', function(req, res) {
 	var recipeUri = '';
 	db.favorite.find({where: {label: recipeLabel}}).then(function(data) {
 		recipeUri = data.dataValues.uri;
-		recipeUrl = 'https://api.edamam.com/search?app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&r=' + recipeUri;
-		console.log(recipeUrl);
+		encoded = encodeURIComponent(recipeUri);
+		recipeUrl = 'https://api.edamam.com/search?app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&r=' + encoded;
 		request(recipeUrl, function(error, response, body) {
 			recipe = JSON.parse(body);
-			console.log(recipe[0]);
+			console.log(recipe[0].totalNutrients);
 			res.render('recipes/show', {recipe: recipe });
 		});
 	})
