@@ -3,7 +3,13 @@ font-family: 'Pompiere', cursive;*/
 
 html, body {
 	font-family: 'Barlow Semi Condensed', sans-serif;
-	background-color: #bdbdbd ;
+	background: 
+		linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
+		linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
+		linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
+		linear-gradient(45deg, #ECEDDC 25%, transparent 25%);	
+	background-size: 100px 100px;
+	background-color: #b2dfdb;
 }
 
 nav {
@@ -18,8 +24,27 @@ h6 {
 	font-weight: 600;
 }
 
+.form-background {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 15px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 151, 167, .3);
+}
+
+.carousel {
+	margin-top: 40px;
+	border-radius: 5px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 151, 167, .3);
+}
+
 .card-title {
 	font-family: 'EB Garamond', serif;
+}
+
+.card {
+	border-radius: 5px;
+	box-shadow: 12px 12px 2px 1px rgba(0, 151, 167, .3);
 }
 
 .recipe-title {
@@ -52,6 +77,10 @@ h6 {
 	margin: 15px auto 10px auto!important;
 }
 
+.submit-search-button:hover {
+	background-color: #f44336!important;
+}
+
 .btn-large {
 	height: 42px!important;
 	line-height: 42px!important;
@@ -79,15 +108,17 @@ span {
 
 .profile {
 	background-color: rgba(255,255,255,0.8);
+	box-shadow: 12px 12px 2px 1px rgba(0, 151, 167, .3);
+	border: transparent 10px solid;
 	border-radius: 20px;
-	border: #bdbdbd solid 15px;
 	height: 450px;
 }
 
 .greeting {
 	color: #d32f2f;
 	font-family: 'EB Garamond', serif;
-	text-shadow: 3px 3px #898989;
+	text-shadow: 2px 2px #898989;
+	font-size: 40px;
 }
 
 .ingredients {
