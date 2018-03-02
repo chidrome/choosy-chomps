@@ -9,7 +9,6 @@ $( document ).ready(function(){
 	
 	//submits the data for the edit 
 	$('.edit-profile').submit(function(e) {
-		console.log('submit');
 		e.preventDefault();
 		$.ajax({
 			url: $(this).attr('action'),
@@ -40,11 +39,11 @@ $( document ).ready(function(){
 			url: destination
 		}).done(function(data) {
 			console.log(data);
-			window.location = '/profile';
+			window.location.href = '/profile';
 		});
 	});
 
-	//removes the 'logged in/out' alert from screen 
+	//removes the 'logged in/out' alert from screen
 	$('.okay').on('click', function(e) {
 		$('.alert').css('display', 'none');
 	});

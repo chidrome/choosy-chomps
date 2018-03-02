@@ -117,6 +117,11 @@ span {
 	font-family: 'EB Garamond', serif;
 }
 
+.label {
+	color: #607d8b;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 .profile {
 	background-color: rgba(255,255,255,0.8);
 	border: transparent 10px solid;
@@ -128,6 +133,19 @@ span {
 	overflow: scroll;
 	height: 75px;
 	margin-bottom: 20px;
+	background-color: #ffebee;
+	border-radius: 10px;
+	padding-left: 5px;
+}
+
+.health {
+	color: #00acc1;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.caution {
+	color: #f57c00;
+	font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .ingredients, .detail {

@@ -16,7 +16,7 @@
     <div class='col s12 m3 l3'>
       <h5>Ingredients: </h5>
       <div class='ingredients detail'>
-        <ul>
+        <ul class='browser-default'>
           <% for(i = 0; i < recipe[0].ingredientLines.length; i++ ) {%>
             <li> <%= recipe[0].ingredientLines[i] %> </li>
           <% } %>
@@ -25,16 +25,16 @@
     </div>
 
     <div class='col s12 m3 l3'>
-      <h5>Additional Info</h5>
+      <h5>Additional Info:</h5>
       <div class='ingredients detail'>
         <ul>
-          <li>Calories Per Serving: <script> document.write(calPerServ) </script></li>
-          <li>Servings: <%= recipe[0].yield %> </li>
-          <h5> Health Labels: </h5>
+          <li><span class='label'>Calories Per Serving:</span> <script> document.write(calPerServ) </script></li>
+          <li><span class='label'>Servings:</span> <%= recipe[0].yield %> </li>
+          <h5  class='health'> Health Labels: </h5>
           <% for(i = 0; i < recipe[0].healthLabels.length; i++ ) {%>
-            <li> <%= recipe[0].healthLabels[i] %> </li>
+            <li><%= recipe[0].healthLabels[i] %></li>
           <% } %>
-          <h5> Cautions: </h5>
+          <h5 class='caution'> Cautions: </h5>
           <% for(i = 0; i < recipe[0].cautions.length; i++ ) {%>
             <li> <%= recipe[0].cautions[i] %> </li>
           <% } %>
@@ -43,12 +43,12 @@
     </div>
 
     <div class='col s12 m3 l3'>
-      <h5>Nutrients</h5>
+      <h5>Nutrients:</h5>
       <div class='ingredients detail'>
         <ul>
           <% var nutrients = recipe[0].totalNutrients; %>
           <% for (var item in nutrients) { %>
-            <li>  <%= nutrients[item].label %>: <%= Math.floor(nutrients[item].quantity) %> <%= nutrients[item].unit %>   </li>
+            <li> <span class='label'><%= nutrients[item].label %>:</span> <%= Math.floor(nutrients[item].quantity) %> <%= nutrients[item].unit %>   </li>
 
           <% } %>
         </ul>
