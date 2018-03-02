@@ -47,9 +47,15 @@
       <div class='ingredients detail'>
         <ul>
           <% var nutrients = recipe[0].totalNutrients; %>
+          <% var totalDaily = recipe[0].totalDaily; %>
           <% for (var item in nutrients) { %>
             <li> <span class='label'><%= nutrients[item].label %>:</span> <%= Math.floor(nutrients[item].quantity) %> <%= nutrients[item].unit %>   </li>
-
+          <% } %>
+        </ul>
+        <h5  class='health'> Total Daily: </h5>
+        <ul>
+          <% for (var item in totalDaily) { %>
+            <li> <span class='label'><%= totalDaily[item].label %>:</span> <%= Math.floor(totalDaily[item].quantity) %><%= totalDaily[item].unit %>   </li>
           <% } %>
         </ul>
       </div>

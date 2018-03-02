@@ -36,20 +36,31 @@ router.get('/', function(req, res) {
     });
 });
 
-//shows details of a specific recipe
+//shows details of a specific recipe when gotten from profile
 router.get('/:label', function(req, res) {
 	var recipeLabel = req.params.label;
 	var recipeUri = '';
+	console.log('in get/:label route');
 	db.favorite.find({where: {label: recipeLabel}}).then(function(data) {
 		recipeUri = data.dataValues.uri;
 		encoded = encodeURIComponent(recipeUri);
 		recipeUrl = 'https://api.edamam.com/search?app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&r=' + encoded;
 		request(recipeUrl, function(error, response, body) {
 			recipe = JSON.parse(body);
-			console.log(recipe[0].totalNutrients);
-			res.render('recipes/show', {recipe: recipe });
+			res.render('recipes/show', {recipe: recipe});
 		});
 	})
+});
+
+//shows details of a specific recipe when gotten from all.ejs
+router.get('/show/:uri', function(req, res) {
+	var recipeAPIUri = encodeURIComponent(req.params.uri);
+	recipeAPIUrl = 'https://api.edamam.com/search?app_id=' + process.env.API_ID + '&app_key=' + process.env.API_KEY + '&r=' + recipeAPIUri;
+	console.log(recipeAPIUrl);
+	request(recipeAPIUrl, function(error, response, body) {
+		recipe = JSON.parse(body);
+		res.render('recipes/show', {recipe: recipe});
+	});
 });
 
 
