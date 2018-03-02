@@ -169,7 +169,7 @@ span {
 	border-radius: 50%;
 }
 
-#delete-recipe, .view-recipe {
+.delete-recipe, .view-recipe {
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	text-transform: uppercase;
 }
@@ -178,7 +178,7 @@ span {
 	margin-top: 8px;
 }
 
-#delete-recipe:hover {
+.delete-recipe:hover {
 	cursor: pointer;
 }
 

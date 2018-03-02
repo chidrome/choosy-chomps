@@ -30,7 +30,7 @@ $( document ).ready(function(){
 	  hideNav: '.pagination',
 	});
 
-	$('#delete-recipe').on('click', function(e) {
+	$('.delete-recipe').on('click', function(e) {
 	e.preventDefault();
 	var specificRecipe = $(this);
 	var destination = specificRecipe.attr('action');
