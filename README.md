@@ -29,7 +29,7 @@ _This is the search bar referenced above._
 
 ## Where to begin? 
 
-To be honest, I was at a bit of a loss at first because it all seemed rather overwhelming with this being my first independent full-stack project. I took a step back, however, and decided to start with what I'm best at: designing. However, I needed some inspiration! I knew--vaguely--what I was going to do with this and what its purpose was, so I asked a few people who would possibly benefit from it the kinds of features they'd like to see. Thus, I got my user stories. 
+To be honest, I was at a bit of a loss at first because it all seemed rather overwhelming with this being my first independent full-stack project. I took a step back, however, and decided to start with what I'm best at: designing. However, I needed some inspiration! I knew--vaguely--what I was going to do with this and what its purpose was, so I asked a few people who would possibly benefit from it for some kinds of features they'd like to see. Thus, I got my user stories. 
 
 ### User Stories
 
