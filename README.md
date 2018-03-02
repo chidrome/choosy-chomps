@@ -74,6 +74,17 @@ With some trial and error, I managed to make a fully-responsive home page with i
 | GET    | /recipes/:label   | Renders show.ejs that displays in-depth information gathered from another API call regarding a specific recipe.                                                         |
 | GET | /recipes/show/:uri | Renders the show.ejs page but gets the URI directly from the source rather than from database. (Could probably be added to the /recipes/:label route somehow with some conditionals but this works for the time being!) |
 
+## Models 
+### Users
+| id | name   | email | password            | bio    |
+|----|--------|-------|------------------------------|--------|
+| 1  | STRING | EMAIL | $2a$10$8qKpgr1yN...ENCRYPTED STRING | STRING |
+
+### Favorites
+| id | label  | ingredients    | imgUrl  | url    | uri    |
+|----|--------|----------------|---------|--------|--------|
+| 1  | STRING | ARRAY\[STRINGS\] | STRING  | STRING | STRING |
+
 ## Analyzing the API 
 
 Before I dove into making the recipe routes functional, I wanted to thoroughly understand the API and mentally prepare myself to gather the information I was actually looking for rather than fishing through and struggling more than necessary. After searching for a while, I decided I wanted to make it so the user could filter their search results by a simple query string of, say, a favorite ingredient, and by a prepopulated list of dietary options that are found within the API. Those two parameters would then be passed into the API call's URL (along with the key and id that are necessary, of course!) and would then only return the data the user would be looking for. 
@@ -125,6 +136,8 @@ _Search results page._
 ![screen shot 2018-03-02 at 11 01 12 am](https://user-images.githubusercontent.com/25888207/36916556-0e0b60ac-1e09-11e8-9dc0-d7bd363c9baa.png)
 _View details page._
 
+## Next Steps
 
+I'd really love to implement a feature where the user can gather ingredients and add them to a shopping list that they can reference later on. 
 
-
+I'd also really like to make it so the user can enter a certain portion size, and the ingredients listed on the details page would be calculated to be exactly the amount the user would need. If I were to go the simple route with this, I'd just need to use the API's built-in weights of each ingredient and do some simple math to convert the given metrics into something useful to the user. 
