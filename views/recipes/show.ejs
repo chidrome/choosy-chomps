@@ -48,8 +48,7 @@
         <ul>
           <% var nutrients = recipe[0].totalNutrients; %>
           <% for (var item in nutrients) { %>
-
-            <li>  <% nutrients[item].label %>  </li>
+            <li>  <%= nutrients[item].label %>: <%= Math.floor(nutrients[item].quantity) %> <%= nutrients[item].unit %>   </li>
 
           <% } %>
         </ul>
