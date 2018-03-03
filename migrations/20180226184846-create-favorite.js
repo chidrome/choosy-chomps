@@ -20,6 +20,9 @@ module.exports = {
       url: {
         type: Sequelize.STRING
       },
+      uri: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
