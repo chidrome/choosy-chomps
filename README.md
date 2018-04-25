@@ -1,5 +1,7 @@
 # Choosy Chomps
 
+[LIVE SITE](http://choosychomps.herokuapp.com/)
+
 This is a fully-functional Node.js recipe app that is catered toward those who have strict dietary restrictions (or are just picky eaters!) that pulls from the [Edamam API](https://www.edamam.com/) to provide detailed nutritional information about each recipe. Users can search for ingredients within a specific category of diet restriction and they are provided with a plethora of recipes that fit their needs. 
 
 ***
@@ -29,7 +31,7 @@ _This is the search bar referenced above._
 
 ## Where to begin? 
 
-To be honest, I was at a bit of a loss at first because it all seemed rather overwhelming with this being my first independent full-stack project. I took a step back, however, and decided to start with what I'm best at: designing. However, I needed some inspiration! I knew--vaguely--what I was going to do with this and what its purpose was, so I asked a few people who would possibly benefit from it the kinds of features they'd like to see. Thus, I got my user stories. 
+To be honest, I was at a bit of a loss at first because it all seemed rather overwhelming with this being my first independent full-stack project. I took a step back, however, and decided to start with what I'm best at: designing. However, I needed some inspiration! I knew--vaguely--what I was going to do with this and what its purpose was, so I asked a few people who would possibly benefit from it for some kinds of features they'd like to see. Thus, I got my user stories. 
 
 ### User Stories
 
