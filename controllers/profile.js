@@ -35,7 +35,8 @@ router.post('/', function(req, res) {
 	    imgUrl: req.body.image,
 	    ingredients: req.body.ingredients.split(','),
 	    url: req.body.url,
-	    uri: req.body.uri
+	    uri: req.body.uri,
+	    userId: req.user.id
 	}).then(function(data) {
 		// console.log(data);
 		res.redirect('back');

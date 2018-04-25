@@ -46,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
   user.associate = function(models) {
     //this is a class method
     // associations can be defined here
+    models.user.hasMany(models.favorite);
     
   };
 

@@ -190,5 +190,8 @@ span {
 	.brand-logo {
 		font-size: 20px!important;
 	}
+}
 
+.login-button {
+	margin-top: 30px!important;
 }
