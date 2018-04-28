@@ -4,11 +4,15 @@
         <a href="/" class="brand-logo center">Choosy<i class="material-icons">local_dining</i>Chomps</a>
          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="left hide-on-med-and-down">
+          <%if (!currentUser) { %>
           <li><a href="/auth/signup">Sign up</a></li>
           <li><a href="/auth/login">Login</a></li>
+          <% } %>
         </ul>
         <ul class="right hide-on-med-and-down">
+          <%if (currentUser) { %>
         	<li><a href="/auth/logout">Logout</a></li>
+          <% } %>
         	<li><a href="/profile">Your Profile</a></li>
         </ul>
       </div>
@@ -16,8 +20,12 @@
   </div>
   <ul class="side-nav grey lighten-4" id="mobile-demo">
 	<li><a href="/profile">Your Profile</a></li>
-	<li><a href="/auth/logout">Logout</a></li>
-	<li><a href="/auth/signup">Sign up</a></li>
-	<li><a href="/auth/login">Login</a></li>
+  <%if (currentUser) { %>
+    <li><a href="/auth/logout">Logout</a></li>
+  <% } %>
+  <%if (!currentUser) { %>
+  	<li><a href="/auth/signup">Sign up</a></li>
+  	<li><a href="/auth/login">Login</a></li>
+  <% } %>
   </ul>
   
