@@ -1,7 +1,8 @@
 require('dotenv').config();
 var flash = require('connect-flash');
 var express = require('express');
-var favicon = require('express-favicon');
+var path = require('path');
+var favicon = require('serve-favicon');
 var ejsLayouts = require('express-ejs-layouts');
 var bodyParser = require('body-parser');
 var session = require('express-session'); 
@@ -16,7 +17,7 @@ app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 app.use(express.static(__dirname + '/public/'));
-app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(path.join(__dirname+'/public/favicon.ico')));
 
 //takes an object of all the stuff you want to 
 //store in the session for right now

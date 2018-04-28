@@ -40,6 +40,8 @@ router.post('/', function(req, res) {
 	}).then(function(data) {
 		// console.log(data);
 		res.redirect('back');
+	}).catch(function(error) {
+		console.log('this is the error ' + error);
 	});
 });
 
