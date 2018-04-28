@@ -83,9 +83,9 @@ With some trial and error, I managed to make a fully-responsive home page with i
 | 1  | STRING | EMAIL | $2a$10$8qKpgr1yN...ENCRYPTED STRING | STRING |
 
 ### Favorites
-| id | label  | ingredients    | imgUrl  | url    | uri    |
-|----|--------|----------------|---------|--------|--------|
-| 1  | STRING | ARRAY\[STRINGS\] | STRING  | STRING | STRING |
+| id | label  | ingredients    | imgUrl  | url    | uri    | userId |
+|----|--------|----------------|---------|--------|--------|--------|
+| 1  | STRING | ARRAY\[STRINGS\] | STRING  | STRING | STRING | INTEGER |
 
 ## Analyzing the API 
 
