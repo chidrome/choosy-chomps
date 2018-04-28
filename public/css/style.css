@@ -182,6 +182,13 @@ span {
 	margin-top: 8px;
 }
 
+.card-title {
+	width: inherit;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
 .delete-recipe:hover {
 	cursor: pointer;
 }
