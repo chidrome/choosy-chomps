@@ -137,6 +137,10 @@ span {
 	height: 450px;
 }
 
+#no-recipes {
+	display: none;
+}
+
 .delete-recipe {
 	color: #f44336;
 }
