@@ -22,7 +22,7 @@
 				<% recipe.forEach(function(recipe) { %>
 					<% if (currentUser.id === recipe.userId) { %>
 					      <h5><a class='label red-text text-darken-3' href='<%= recipe.url %>'><%= recipe.label %></a></h5>
-					      <a href='<%= recipe.url %>'><img class='responsive-img recipe-pic' src='<%= recipe.imgUrl %>'></a>
+					      <a href='<%= recipe.url %>'><img class='responsive-img recipe-pic' src='<%= recipe.imgUrl %>' alt='<%= recipe.label %>'></a>
 					      <p class='recipe-info'></p>
 		            	 	<ul>
 		        	 		<% for(i = 0; i < recipe.ingredients; i++ ) {%>

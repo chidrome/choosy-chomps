@@ -3,14 +3,14 @@ var db = require('../models');
 var bodyParser = require('body-parser');
 var router = express.Router();
 
-router.get('/', function(req, res) {
-	db.favorite.count({where: {userId: currentUser.id}}).then(function(data) {
-		console.log('this is the data passed back', data)
-		if (data === 0) {
-			$('#no-recipes').attr('display', 'none');
-		};
-	});
-});
+// router.get('/', function(req, res) {
+// 	db.favorite.count({where: {userId: currentUser.id}}).then(function(data) {
+// 		console.log('this is the data passed back', data)
+// 		if (data === 0) {
+// 			$('#no-recipes').attr('display', 'none');
+// 		};
+// 	});
+// });
 
 //edits the user's profile information
 router.get('/edit/:id', function(req, res){
